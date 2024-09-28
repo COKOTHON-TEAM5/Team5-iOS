@@ -36,6 +36,8 @@
 		A4C8AD242CA80BE700FBDB01 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD232CA80BE700FBDB01 /* UIView+.swift */; };
 		A4C8AD262CA80CCD00FBDB01 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD252CA80CCD00FBDB01 /* CustomTextField.swift */; };
 		A4C8AD282CA80D7400FBDB01 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD272CA80D7400FBDB01 /* UITextField+.swift */; };
+		A4C8AD2B2CA8112200FBDB01 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD2A2CA8112200FBDB01 /* SignupViewController.swift */; };
+		A4C8AD2D2CA8112B00FBDB01 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD2C2CA8112B00FBDB01 /* SignupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		A4C8AD232CA80BE700FBDB01 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A4C8AD252CA80CCD00FBDB01 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A4C8AD272CA80D7400FBDB01 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		A4C8AD2A2CA8112200FBDB01 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A4C8AD2C2CA8112B00FBDB01 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 		A4C8AD192CA80AB200FBDB01 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				A4C8AD292CA8110E00FBDB01 /* Signup */,
 				A4C8AD1A2CA80AB700FBDB01 /* Login */,
 			);
 			path = Auth;
@@ -243,6 +248,15 @@
 				A4C8AD272CA80D7400FBDB01 /* UITextField+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A4C8AD292CA8110E00FBDB01 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD2C2CA8112B00FBDB01 /* SignupView.swift */,
+				A4C8AD2A2CA8112200FBDB01 /* SignupViewController.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,10 +349,12 @@
 				A48AC4272CA7F98800212432 /* AuthTarget.swift in Sources */,
 				A48AC3EC2CA7D56000212432 /* ViewController.swift in Sources */,
 				A48AC4292CA7F98F00212432 /* AuthService.swift in Sources */,
+				A4C8AD2D2CA8112B00FBDB01 /* SignupView.swift in Sources */,
 				A48AC40D2CA7DB0B00212432 /* NetworkLoggerPlugin.swift in Sources */,
 				A48AC4182CA7DF2200212432 /* SizeLiterals.swift in Sources */,
 				A48AC4152CA7DDBF00212432 /* HeaderConstant.swift in Sources */,
 				A48AC3E82CA7D56000212432 /* AppDelegate.swift in Sources */,
+				A4C8AD2B2CA8112200FBDB01 /* SignupViewController.swift in Sources */,
 				A4C8AD262CA80CCD00FBDB01 /* CustomTextField.swift in Sources */,
 				A4C8AD1E2CA80ACC00FBDB01 /* LoginView.swift in Sources */,
 				A4C8AD212CA80B3C00FBDB01 /* CustomNavigationBar.swift in Sources */,
