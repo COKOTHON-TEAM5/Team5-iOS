@@ -11,9 +11,12 @@ import SnapKit
 
 final class RecordView: UIView {
     
+    var monthBackButtonHandler: (() -> Void)?
+    var monthRightButtonHandler: (() -> Void)?
+    
     // MARK: - UI Components
     
-    private let monthTitle = {
+    let monthTitle = {
         let label = UILabel()
         label.text = "2024.09"
         label.textColor = .white
@@ -56,6 +59,7 @@ final class RecordView: UIView {
         setUI()
         setHierarchy()
         setLayout()
+        setAddTarget()
     }
     
     @available(*, unavailable)
@@ -96,5 +100,23 @@ extension RecordView {
             $0.top.equalTo(monthTitle.snp.bottom).offset(25)
             $0.leading.trailing.bottom.equalToSuperview()
         }
+    }
+}
+
+extension RecordView {
+    
+    func setAddTarget() {
+        monthBackButton.addTarget(self, action: #selector(backButtonDidTap), for: .touchUpInside)
+        monthRightButton.addTarget(self, action: #selector(rightButtonDidTap), for: .touchUpInside)
+    }
+    
+    @objc
+    func backButtonDidTap() {
+        monthBackButtonHandler?()
+    }
+    
+    @objc
+    func rightButtonDidTap() {
+        monthRightButtonHandler?()
     }
 }
