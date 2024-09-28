@@ -26,4 +26,8 @@ enum URLConstant {
     static let skipURL = "diary/skip"
     static let writeURL = "diary/write"
     
+    // Record
+    
+    static let getRecord = "diary/monthly"
+    
 }
