@@ -60,6 +60,8 @@
 		A4C8AD5F2CA8491400FBDB01 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD5E2CA8491400FBDB01 /* LogoViewController.swift */; };
 		A4C8AD612CA8491D00FBDB01 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD602CA8491D00FBDB01 /* LogoView.swift */; };
 		A4C8AD642CA84B2200FBDB01 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD632CA84B2200FBDB01 /* SplashViewController.swift */; };
+		A4C8AD672CA84C8000FBDB01 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD662CA84C7F00FBDB01 /* UserDefaultWrapper.swift */; };
+		A4C8AD692CA84C8E00FBDB01 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD682CA84C8E00FBDB01 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,8 @@
 		A4C8AD5E2CA8491400FBDB01 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 		A4C8AD602CA8491D00FBDB01 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		A4C8AD632CA84B2200FBDB01 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		A4C8AD662CA84C7F00FBDB01 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
+		A4C8AD682CA84C8E00FBDB01 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 		A48AC4072CA7D68300212432 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				A4C8AD652CA84C7400FBDB01 /* User */,
 				A48AC3E72CA7D56000212432 /* AppDelegate.swift */,
 				A48AC3E92CA7D56000212432 /* SceneDelegate.swift */,
 			);
@@ -397,6 +402,15 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		A4C8AD652CA84C7400FBDB01 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD662CA84C7F00FBDB01 /* UserDefaultWrapper.swift */,
+				A4C8AD682CA84C8E00FBDB01 /* UserManager.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -509,6 +523,7 @@
 				A4C8AD322CA8156C00FBDB01 /* TabBarController.swift in Sources */,
 				A4C8AD562CA834F000FBDB01 /* UITextView+.swift in Sources */,
 				A48AC4132CA7DDA900212432 /* BaseTargetType.swift in Sources */,
+				A4C8AD672CA84C8000FBDB01 /* UserDefaultWrapper.swift in Sources */,
 				A48AC40F2CA7DB2400212432 /* URLConstant.swift in Sources */,
 				A4C8AD5F2CA8491400FBDB01 /* LogoViewController.swift in Sources */,
 				A4C8AD352CA815FE00FBDB01 /* RecordViewController.swift in Sources */,
@@ -524,6 +539,7 @@
 				A4C8AD1C2CA80AC600FBDB01 /* LoginViewController.swift in Sources */,
 				A4C8AD4B2CA8207500FBDB01 /* DreamWriteView.swift in Sources */,
 				A48AC4112CA7DB2F00212432 /* Config.swift in Sources */,
+				A4C8AD692CA84C8E00FBDB01 /* UserManager.swift in Sources */,
 				A4C8AD5A2CA83ACC00FBDB01 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
