@@ -32,7 +32,7 @@ final class LoginView: UIView {
     
     let loginButton = {
         let button = UIButton()
-        button.backgroundColor = .mainPurple
+        button.backgroundColor = .mainSkyBlue
         button.setTitle("로그인", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .fontGuide(type: .PretandardSemiBold, size: 18)

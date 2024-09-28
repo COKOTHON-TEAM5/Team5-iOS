@@ -67,8 +67,8 @@ private extension TabBarController {
     }
     
     func setTabBarUI() {
-        tabBar.backgroundColor = .white
-        tabBar.tintColor = .purple100
+        tabBar.backgroundColor = .mainBackground
+        tabBar.tintColor = .mainSkyBlue
         tabBar.unselectedItemTintColor = .gray700
     }
     

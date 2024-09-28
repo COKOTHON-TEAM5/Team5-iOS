@@ -44,7 +44,7 @@ final class SignupView: UIView {
     
     let checkButton = {
         let button = UIButton()
-        button.backgroundColor = .mainPurple
+        button.backgroundColor = .mainSkyBlue
         button.setTitle("중복확인", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .fontGuide(type: .PretandardSemiBold, size: 16)
@@ -57,7 +57,7 @@ final class SignupView: UIView {
     
     let signupButton = {
         let button = UIButton()
-        button.backgroundColor = .mainPurple
+        button.backgroundColor = .mainBlue
         button.setTitle("회원가입", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .fontGuide(type: .PretandardSemiBold, size: 18)
