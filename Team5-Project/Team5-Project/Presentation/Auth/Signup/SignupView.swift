@@ -46,6 +46,7 @@ final class SignupView: UIView {
         let button = UIButton()
         button.backgroundColor = .mainSkyBlue
         button.setTitle("중복확인", for: .normal)
+        button.setTitle("확인완료", for: .disabled)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .fontGuide(type: .PretandardSemiBold, size: 16)
         button.layer.cornerRadius = 20

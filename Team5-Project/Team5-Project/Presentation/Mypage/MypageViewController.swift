@@ -37,11 +37,40 @@ extension MypageViewController {
         cv.delegate = self
         cv.dataSource = self
     }
+    
+    func changeRootToSplashVC() {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            if let window = windowScene.windows.first {
+                let spalshVC = SplashViewController()
+                let navigationController = UINavigationController(rootViewController: spalshVC)
+                window.rootViewController = navigationController
+            }
+        }
+    }
 }
 
 
 extension MypageViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.item {
+        case 0:
+            print("공지사항")
+        case 1:
+            print("약관정책")
+        case 2:
+            print("개발자소개")
+        case 3:
+            print("로그아웃")
+            UserManager.shared.logout()
+            self.changeRootToSplashVC()
+        case 4:
+            print("탈퇴하기")
+            UserManager.shared.withdraw()
+            self.changeRootToSplashVC()
+        default:
+            break
+        }
+    }
 }
 
 extension MypageViewController: UICollectionViewDataSource {

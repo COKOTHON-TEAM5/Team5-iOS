@@ -65,6 +65,16 @@
 		A4C8AD672CA84C8000FBDB01 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD662CA84C7F00FBDB01 /* UserDefaultWrapper.swift */; };
 		A4C8AD692CA84C8E00FBDB01 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD682CA84C8E00FBDB01 /* UserManager.swift */; };
 		A4C8AD6B2CA84F8800FBDB01 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD6A2CA84F8800FBDB01 /* UIButton+.swift */; };
+		A4C8AD702CA8807900FBDB01 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD6F2CA8807900FBDB01 /* GeneralResponse.swift */; };
+		A4C8AD732CA88C9A00FBDB01 /* SignupRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD722CA88C9A00FBDB01 /* SignupRequestDto.swift */; };
+		A4C8AD752CA88CED00FBDB01 /* SignupResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD742CA88CEC00FBDB01 /* SignupResponseDto.swift */; };
+		A4C8AD772CA88DDE00FBDB01 /* LoginRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD762CA88DDE00FBDB01 /* LoginRequestDto.swift */; };
+		A4C8AD792CA894B200FBDB01 /* CheckUsernameResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD782CA894B200FBDB01 /* CheckUsernameResponseDto.swift */; };
+		A4C8AD7B2CA89B3C00FBDB01 /* SleepStartRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD7A2CA89B3C00FBDB01 /* SleepStartRequestDto.swift */; };
+		A4C8AD7D2CA89D1C00FBDB01 /* DiaryTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD7C2CA89D1C00FBDB01 /* DiaryTarget.swift */; };
+		A4C8AD7F2CA89D9300FBDB01 /* DiaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD7E2CA89D9300FBDB01 /* DiaryService.swift */; };
+		A4C8AD812CA89DAF00FBDB01 /* EmptyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD802CA89DAF00FBDB01 /* EmptyDto.swift */; };
+		A4C8AD832CA8A39C00FBDB01 /* WriteRequstDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD822CA8A39C00FBDB01 /* WriteRequstDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +135,17 @@
 		A4C8AD662CA84C7F00FBDB01 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		A4C8AD682CA84C8E00FBDB01 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		A4C8AD6A2CA84F8800FBDB01 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		A4C8AD6D2CA86AF200FBDB01 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		A4C8AD6F2CA8807900FBDB01 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		A4C8AD722CA88C9A00FBDB01 /* SignupRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequestDto.swift; sourceTree = "<group>"; };
+		A4C8AD742CA88CEC00FBDB01 /* SignupResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseDto.swift; sourceTree = "<group>"; };
+		A4C8AD762CA88DDE00FBDB01 /* LoginRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDto.swift; sourceTree = "<group>"; };
+		A4C8AD782CA894B200FBDB01 /* CheckUsernameResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckUsernameResponseDto.swift; sourceTree = "<group>"; };
+		A4C8AD7A2CA89B3C00FBDB01 /* SleepStartRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepStartRequestDto.swift; sourceTree = "<group>"; };
+		A4C8AD7C2CA89D1C00FBDB01 /* DiaryTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTarget.swift; sourceTree = "<group>"; };
+		A4C8AD7E2CA89D9300FBDB01 /* DiaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryService.swift; sourceTree = "<group>"; };
+		A4C8AD802CA89DAF00FBDB01 /* EmptyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDto.swift; sourceTree = "<group>"; };
+		A4C8AD822CA8A39C00FBDB01 /* WriteRequstDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteRequstDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +195,7 @@
 				A48AC4052CA7D67900212432 /* Network */,
 				A48AC4042CA7D67200212432 /* Presentation */,
 				A48AC3F52CA7D56100212432 /* Info.plist */,
+				A4C8AD6D2CA86AF200FBDB01 /* Config.xcconfig */,
 			);
 			path = "Team5-Project";
 			sourceTree = "<group>";
@@ -186,9 +208,6 @@
 				A4C8AD482CA8205D00FBDB01 /* Main */,
 				A4C8AD3F2CA81D0100FBDB01 /* Mypage */,
 				A4C8AD332CA815EE00FBDB01 /* Record */,
-				A4C8AD1F2CA80B2D00FBDB01 /* Common */,
-				A4C8AD192CA80AB200FBDB01 /* Auth */,
-				0335188B2CA8467100F60B61 /* RecordDetail */,
 				A48AC3EB2CA7D56000212432 /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -197,6 +216,7 @@
 		A48AC4052CA7D67900212432 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A4C8AD712CA88C8F00FBDB01 /* Data */,
 				A48AC40B2CA7D9AA00212432 /* Base */,
 				A48AC40A2CA7D9A600212432 /* Target */,
 				A48AC4092CA7D9A000212432 /* Service */,
@@ -240,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				A48AC4282CA7F98F00212432 /* AuthService.swift */,
+				A4C8AD7E2CA89D9300FBDB01 /* DiaryService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -248,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				A48AC4262CA7F98800212432 /* AuthTarget.swift */,
+				A4C8AD7C2CA89D1C00FBDB01 /* DiaryTarget.swift */,
 			);
 			path = Target;
 			sourceTree = "<group>";
@@ -260,6 +282,7 @@
 				A48AC40E2CA7DB2400212432 /* URLConstant.swift */,
 				A48AC4122CA7DDA900212432 /* BaseTargetType.swift */,
 				A48AC4142CA7DDBF00212432 /* HeaderConstant.swift */,
+				A4C8AD6F2CA8807900FBDB01 /* GeneralResponse.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -349,9 +372,8 @@
 		A4C8AD332CA815EE00FBDB01 /* Record */ = {
 			isa = PBXGroup;
 			children = (
-				A4C8AD382CA8163500FBDB01 /* RecordCollectionViewCell.swift */,
-				A4C8AD362CA8160300FBDB01 /* RecordView.swift */,
-				A4C8AD342CA815FE00FBDB01 /* RecordViewController.swift */,
+				A4C8AD6C2CA8692F00FBDB01 /* RecordList */,
+				0335188B2CA8467100F60B61 /* RecordDetail */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -428,6 +450,30 @@
 				A4C8AD682CA84C8E00FBDB01 /* UserManager.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		A4C8AD6C2CA8692F00FBDB01 /* RecordList */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD382CA8163500FBDB01 /* RecordCollectionViewCell.swift */,
+				A4C8AD362CA8160300FBDB01 /* RecordView.swift */,
+				A4C8AD342CA815FE00FBDB01 /* RecordViewController.swift */,
+			);
+			path = RecordList;
+			sourceTree = "<group>";
+		};
+		A4C8AD712CA88C8F00FBDB01 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD722CA88C9A00FBDB01 /* SignupRequestDto.swift */,
+				A4C8AD742CA88CEC00FBDB01 /* SignupResponseDto.swift */,
+				A4C8AD762CA88DDE00FBDB01 /* LoginRequestDto.swift */,
+				A4C8AD782CA894B200FBDB01 /* CheckUsernameResponseDto.swift */,
+				A4C8AD7A2CA89B3C00FBDB01 /* SleepStartRequestDto.swift */,
+				A4C8AD802CA89DAF00FBDB01 /* EmptyDto.swift */,
+				A4C8AD822CA8A39C00FBDB01 /* WriteRequstDto.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,17 +564,25 @@
 			files = (
 				A4C8AD502CA8226800FBDB01 /* DreamWriteCollectionViewCell.swift in Sources */,
 				A4C8AD432CA81D1600FBDB01 /* MypageView.swift in Sources */,
+				A4C8AD7D2CA89D1C00FBDB01 /* DiaryTarget.swift in Sources */,
+				A4C8AD7F2CA89D9300FBDB01 /* DiaryService.swift in Sources */,
+				A4C8AD832CA8A39C00FBDB01 /* WriteRequstDto.swift in Sources */,
+				A4C8AD732CA88C9A00FBDB01 /* SignupRequestDto.swift in Sources */,
 				A4C8AD4D2CA8207D00FBDB01 /* DreamWriteViewController.swift in Sources */,
 				A48AC41A2CA7DF5900212432 /* FontLiterals.swift in Sources */,
 				A4C8AD6B2CA84F8800FBDB01 /* UIButton+.swift in Sources */,
+				A4C8AD772CA88DDE00FBDB01 /* LoginRequestDto.swift in Sources */,
 				A48AC4272CA7F98800212432 /* AuthTarget.swift in Sources */,
+				A4C8AD7B2CA89B3C00FBDB01 /* SleepStartRequestDto.swift in Sources */,
 				A4C8AD472CA81D5A00FBDB01 /* MypageMenuModel.swift in Sources */,
 				A48AC3EC2CA7D56000212432 /* ViewController.swift in Sources */,
 				A4C8AD3E2CA81A7700FBDB01 /* UICollectionViewRegisterable.swift in Sources */,
+				A4C8AD752CA88CED00FBDB01 /* SignupResponseDto.swift in Sources */,
 				A48AC4292CA7F98F00212432 /* AuthService.swift in Sources */,
 				A4C8AD522CA8227300FBDB01 /* EmotionModel.swift in Sources */,
 				A4C8AD2D2CA8112B00FBDB01 /* SignupView.swift in Sources */,
 				A4C8AD5C2CA83AD300FBDB01 /* HomeViewController.swift in Sources */,
+				A4C8AD702CA8807900FBDB01 /* GeneralResponse.swift in Sources */,
 				A48AC40D2CA7DB0B00212432 /* NetworkLoggerPlugin.swift in Sources */,
 				A48AC4182CA7DF2200212432 /* SizeLiterals.swift in Sources */,
 				A48AC4152CA7DDBF00212432 /* HeaderConstant.swift in Sources */,
@@ -537,6 +591,7 @@
 				A4C8AD392CA8163500FBDB01 /* RecordCollectionViewCell.swift in Sources */,
 				A4C8AD262CA80CCD00FBDB01 /* CustomTextField.swift in Sources */,
 				A4C8AD542CA829FF00FBDB01 /* UILabel+.swift in Sources */,
+				A4C8AD792CA894B200FBDB01 /* CheckUsernameResponseDto.swift in Sources */,
 				A4C8AD1E2CA80ACC00FBDB01 /* LoginView.swift in Sources */,
 				A4C8AD212CA80B3C00FBDB01 /* CustomNavigationBar.swift in Sources */,
 				A4C8AD372CA8160300FBDB01 /* RecordView.swift in Sources */,
@@ -555,6 +610,7 @@
 				A4C8AD3B2CA818F000FBDB01 /* NSObject+.swift in Sources */,
 				0335188D2CA8468A00F60B61 /* RecordDetailViewController.swift in Sources */,
 				A4C8AD412CA81D1000FBDB01 /* MypageViewController.swift in Sources */,
+				A4C8AD812CA89DAF00FBDB01 /* EmptyDto.swift in Sources */,
 				A4C8AD282CA80D7400FBDB01 /* UITextField+.swift in Sources */,
 				A4C8AD302CA814B200FBDB01 /* TabBarItem.swift in Sources */,
 				0335188F2CA846A600F60B61 /* RecordDetailView.swift in Sources */,
@@ -701,6 +757,7 @@
 		};
 		A48AC3F92CA7D56100212432 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4C8AD6D2CA86AF200FBDB01 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -709,6 +766,7 @@
 				DEVELOPMENT_TEAM = XGXWL95BMU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Team5-Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "파피오페딜럼";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -738,6 +796,7 @@
 				DEVELOPMENT_TEAM = XGXWL95BMU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Team5-Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "파피오페딜럼";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

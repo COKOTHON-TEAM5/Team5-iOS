@@ -13,7 +13,7 @@ final class MypageView: UIView {
     
     // MARK: - UI Components
     
-    private let profileImage = UIImageView(image: .imgIcon)
+    private let profileImage = UIImageView(image: .imgProfile)
     
     private let userNameLabel = {
         let label = UILabel()
@@ -67,9 +67,9 @@ extension MypageView {
     
     func setLayout() {
         profileImage.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide).offset(67)
+            $0.top.equalTo(safeAreaLayoutGuide).offset(92)
             $0.centerX.equalToSuperview()
-            $0.size.equalTo(100)
+            $0.size.equalTo(86)
         }
         
         userNameLabel.snp.makeConstraints {

@@ -40,7 +40,12 @@ extension SplashViewController {
     }
     
     func checkToken() {
-        let nav = TabBarController()
-        self.navigationController?.pushViewController(nav, animated: true)
+        if UserManager.shared.hasAccessToken {
+            let nav = TabBarController()
+            self.navigationController?.pushViewController(nav, animated: true)
+        } else {
+            let nav = LogoViewController()
+            self.navigationController?.pushViewController(nav, animated: true)
+        }
     }
 }

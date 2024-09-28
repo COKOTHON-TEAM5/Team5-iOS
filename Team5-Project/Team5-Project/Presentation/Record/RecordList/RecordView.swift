@@ -17,7 +17,7 @@ final class RecordView: UIView {
         let label = UILabel()
         label.text = "2024.09"
         label.textColor = .white
-        label.font = .fontGuide(type: .PretandardSemiBold, size: 24)
+        label.font = .fontGuide(type: .PyeongChangRegular, size: 24)
         return label
     }()
     

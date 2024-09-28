@@ -17,7 +17,7 @@ final class LogoView: UIView {
         let label = UILabel()
         label.text = "꿈으로 기록하는 나의 성장 일기"
         label.textColor = .gray200
-        label.font = .fontGuide(type: .PyeongChangRegular, size: 13)
+        label.font = .fontGuide(type: .PyeongChangBold, size: 13)
         return label
     }()
     

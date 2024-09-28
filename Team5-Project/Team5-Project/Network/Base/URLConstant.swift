@@ -13,4 +13,17 @@ enum URLConstant {
     
     static let baseURL = Config.baseURL
     
+    // Auth
+    
+    static let signupURL = "member/signup"
+    static let loginURL = "member/login"
+    static let checkUsernameURL = "member/check-username"
+    
+    // Home
+    
+    static let sleepStartURL = "diary/sleep/start"
+    static let sleepEndURL = "diary/sleep/end"
+    static let skipURL = "diary/skip"
+    static let writeURL = "diary/write"
+    
 }
