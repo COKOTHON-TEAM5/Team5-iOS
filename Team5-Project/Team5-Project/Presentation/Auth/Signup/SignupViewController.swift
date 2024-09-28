@@ -46,7 +46,9 @@ extension SignupViewController {
     
     @objc
     func signupTapped() {
-        print("signup")
+        print(signupView.idTextField.text ?? "")
+        print(signupView.pwTextField.text ?? "")
+        print(signupView.nicknameTextField.text ?? "")
     }
     
     func setGesture() {
@@ -62,7 +64,7 @@ extension SignupViewController {
 extension SignupViewController: BackButtonProtocol {
     
     func tapBackButton() {
-        print("tapbackbutton")
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

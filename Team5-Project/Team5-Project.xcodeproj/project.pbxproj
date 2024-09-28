@@ -125,6 +125,7 @@
 		A4C8AD662CA84C7F00FBDB01 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		A4C8AD682CA84C8E00FBDB01 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		A4C8AD6A2CA84F8800FBDB01 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		A4C8AD6D2CA86AF200FBDB01 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +175,7 @@
 				A48AC4052CA7D67900212432 /* Network */,
 				A48AC4042CA7D67200212432 /* Presentation */,
 				A48AC3F52CA7D56100212432 /* Info.plist */,
+				A4C8AD6D2CA86AF200FBDB01 /* Config.xcconfig */,
 			);
 			path = "Team5-Project";
 			sourceTree = "<group>";
@@ -181,14 +183,11 @@
 		A48AC4042CA7D67200212432 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A4C8AD1F2CA80B2D00FBDB01 /* Common */,
-				A4C8AD192CA80AB200FBDB01 /* Auth */,
 				A4C8AD482CA8205D00FBDB01 /* Main */,
 				A4C8AD3F2CA81D0100FBDB01 /* Mypage */,
 				A4C8AD332CA815EE00FBDB01 /* Record */,
 				A4C8AD1F2CA80B2D00FBDB01 /* Common */,
 				A4C8AD192CA80AB200FBDB01 /* Auth */,
-				0335188B2CA8467100F60B61 /* RecordDetail */,
 				A48AC3EB2CA7D56000212432 /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -349,9 +348,8 @@
 		A4C8AD332CA815EE00FBDB01 /* Record */ = {
 			isa = PBXGroup;
 			children = (
-				A4C8AD382CA8163500FBDB01 /* RecordCollectionViewCell.swift */,
-				A4C8AD362CA8160300FBDB01 /* RecordView.swift */,
-				A4C8AD342CA815FE00FBDB01 /* RecordViewController.swift */,
+				A4C8AD6C2CA8692F00FBDB01 /* RecordList */,
+				0335188B2CA8467100F60B61 /* RecordDetail */,
 			);
 			path = Record;
 			sourceTree = "<group>";
@@ -428,6 +426,16 @@
 				A4C8AD682CA84C8E00FBDB01 /* UserManager.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		A4C8AD6C2CA8692F00FBDB01 /* RecordList */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD382CA8163500FBDB01 /* RecordCollectionViewCell.swift */,
+				A4C8AD362CA8160300FBDB01 /* RecordView.swift */,
+				A4C8AD342CA815FE00FBDB01 /* RecordViewController.swift */,
+			);
+			path = RecordList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -701,6 +709,7 @@
 		};
 		A48AC3F92CA7D56100212432 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4C8AD6D2CA86AF200FBDB01 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -709,6 +718,7 @@
 				DEVELOPMENT_TEAM = XGXWL95BMU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Team5-Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "파피오페딜럼";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -738,6 +748,7 @@
 				DEVELOPMENT_TEAM = XGXWL95BMU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Team5-Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "파피오페딜럼";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

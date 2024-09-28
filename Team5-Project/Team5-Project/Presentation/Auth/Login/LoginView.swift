@@ -60,6 +60,7 @@ extension LoginView {
     
     func setUI() {
         backgroundColor = .mainBackground
+        pwTextField.isSecureTextEntry = true
     }
     
     func setHierarchy() {

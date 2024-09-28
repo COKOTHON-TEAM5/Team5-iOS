@@ -33,11 +33,7 @@ final class RecordCollectionViewCell: UICollectionViewCell, UICollectionViewRegi
         return label
     }()
     
-    private let recordDetailButton = {
-        let button = UIButton()
-        button.setImage(.icDetail, for: .normal)
-        return button
-    }()
+    private let recordDetailImage = UIImageView(image: .icDetail)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,7 +56,7 @@ private extension RecordCollectionViewCell {
     }
     
     func setHierarchy() {
-        addSubviews(recordIcon, recordTitle, recordDate, recordDetailButton)
+        addSubviews(recordIcon, recordTitle, recordDate, recordDetailImage)
     }
     
     func setLayout() {
@@ -80,7 +76,7 @@ private extension RecordCollectionViewCell {
             $0.leading.equalTo(recordTitle.snp.leading)
         }
         
-        recordDetailButton.snp.makeConstraints {
+        recordDetailImage.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(10)
             $0.centerY.equalToSuperview()
             $0.size.equalTo(48)

@@ -40,7 +40,9 @@ extension RecordViewController {
 
 
 extension RecordViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+    }
 }
 
 extension RecordViewController: UICollectionViewDataSource {

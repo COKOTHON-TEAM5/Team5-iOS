@@ -45,7 +45,8 @@ extension LoginViewController {
     
     @objc
     func loginTapped() {
-        print("login")
+        print(loginView.idTextField.text ?? "")
+        print(loginView.pwTextField.text ?? "")
     }
     
     func setGesture() {
@@ -61,7 +62,7 @@ extension LoginViewController {
 extension LoginViewController: BackButtonProtocol {
     
     func tapBackButton() {
-        print("tapbackbutton")
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

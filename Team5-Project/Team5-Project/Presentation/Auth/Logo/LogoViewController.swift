@@ -39,11 +39,13 @@ extension LogoViewController {
     
     @objc
     func loginTapped() {
-        print("login")
+        let nav = LoginViewController()
+        self.navigationController?.pushViewController(nav, animated: true)
     }
     
     @objc
     func signupTapped() {
-        print("signup")
+        let nav = SignupViewController()
+        self.navigationController?.pushViewController(nav, animated: true)
     }
 }

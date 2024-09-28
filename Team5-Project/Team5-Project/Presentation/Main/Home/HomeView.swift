@@ -58,7 +58,7 @@ final class HomeView: UIView {
         label.numberOfLines = 0
         label.textColor = .white
         label.textAlignment = .left
-        label.font = .fontGuide(type: .PyeongChangRegular, size: 12)
+        label.font = .fontGuide(type: .PyeongChangBold, size: 12)
         return label
     }()
     
