@@ -72,6 +72,15 @@ final class HomeView: UIView {
         return button
     }()
     
+    private let passButton = {
+        let button = UIButton()
+        button.setTitle("건너뛰기", for: .normal)
+        button.titleLabel?.textColor = .gray200
+        button.titleLabel?.font = .fontGuide(type: .PyeongChangRegular, size: 12)
+        button.setUnderline()
+        return button
+    }()
+    
     // MARK: - Life Cycles
     
     override init(frame: CGRect) {
@@ -95,7 +104,7 @@ extension HomeView {
     }
     
     func setHierarchy() {
-        addSubviews(backgroundImageView, navigationBar, homeTitleLabel, homeDetailView, homeButton)
+        addSubviews(backgroundImageView, navigationBar, homeTitleLabel, homeDetailView, homeButton, passButton)
         homeDetailView.addSubviews(homeDetailIcon, homeDetailTitle, homeDetailContent)
     }
     
@@ -138,10 +147,17 @@ extension HomeView {
         }
         
         homeButton.snp.makeConstraints {
-            $0.bottom.equalTo(safeAreaLayoutGuide).offset(-18)
+            $0.bottom.equalTo(safeAreaLayoutGuide).offset(-38)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(SizeLiterals.Screen.screenWidth - 32)
             $0.height.equalTo(54)
+        }
+        
+        passButton.snp.makeConstraints {
+            $0.top.equalTo(homeButton.snp.bottom)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(45)
+            $0.height.equalTo(25)
         }
     }
 }
