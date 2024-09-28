@@ -29,6 +29,13 @@
 		A48AC4252CA7E0DF00212432 /* PyeongChang-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A48AC4202CA7E0DF00212432 /* PyeongChang-Regular.otf */; };
 		A48AC4272CA7F98800212432 /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48AC4262CA7F98800212432 /* AuthTarget.swift */; };
 		A48AC4292CA7F98F00212432 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48AC4282CA7F98F00212432 /* AuthService.swift */; };
+		A4C8AD182CA80A8900FBDB01 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C8AD172CA80A8900FBDB01 /* Colors.xcassets */; };
+		A4C8AD1C2CA80AC600FBDB01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD1B2CA80AC600FBDB01 /* LoginViewController.swift */; };
+		A4C8AD1E2CA80ACC00FBDB01 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD1D2CA80ACC00FBDB01 /* LoginView.swift */; };
+		A4C8AD212CA80B3C00FBDB01 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD202CA80B3C00FBDB01 /* CustomNavigationBar.swift */; };
+		A4C8AD242CA80BE700FBDB01 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD232CA80BE700FBDB01 /* UIView+.swift */; };
+		A4C8AD262CA80CCD00FBDB01 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD252CA80CCD00FBDB01 /* CustomTextField.swift */; };
+		A4C8AD282CA80D7400FBDB01 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD272CA80D7400FBDB01 /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +60,13 @@
 		A48AC4202CA7E0DF00212432 /* PyeongChang-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PyeongChang-Regular.otf"; sourceTree = "<group>"; };
 		A48AC4262CA7F98800212432 /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
 		A48AC4282CA7F98F00212432 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A4C8AD172CA80A8900FBDB01 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A4C8AD1B2CA80AC600FBDB01 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A4C8AD1D2CA80ACC00FBDB01 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A4C8AD202CA80B3C00FBDB01 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		A4C8AD232CA80BE700FBDB01 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		A4C8AD252CA80CCD00FBDB01 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A4C8AD272CA80D7400FBDB01 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,8 @@
 		A48AC4042CA7D67200212432 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A4C8AD1F2CA80B2D00FBDB01 /* Common */,
+				A4C8AD192CA80AB200FBDB01 /* Auth */,
 				A48AC3EB2CA7D56000212432 /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -118,6 +134,7 @@
 		A48AC4062CA7D67E00212432 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				A4C8AD222CA80BD800FBDB01 /* Extension */,
 				A48AC4162CA7DF1800212432 /* Literals */,
 				A48AC4082CA7D84700212432 /* Resource */,
 				A48AC3F22CA7D56100212432 /* LaunchScreen.storyboard */,
@@ -139,6 +156,7 @@
 			children = (
 				A48AC41B2CA7E0CA00212432 /* Font */,
 				A48AC3F02CA7D56100212432 /* Assets.xcassets */,
+				A4C8AD172CA80A8900FBDB01 /* Colors.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -190,6 +208,41 @@
 				A48AC4202CA7E0DF00212432 /* PyeongChang-Regular.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		A4C8AD192CA80AB200FBDB01 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD1A2CA80AB700FBDB01 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A4C8AD1A2CA80AB700FBDB01 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD1D2CA80ACC00FBDB01 /* LoginView.swift */,
+				A4C8AD1B2CA80AC600FBDB01 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A4C8AD1F2CA80B2D00FBDB01 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD202CA80B3C00FBDB01 /* CustomNavigationBar.swift */,
+				A4C8AD252CA80CCD00FBDB01 /* CustomTextField.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A4C8AD222CA80BD800FBDB01 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD232CA80BE700FBDB01 /* UIView+.swift */,
+				A4C8AD272CA80D7400FBDB01 /* UITextField+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +318,7 @@
 				A48AC4212CA7E0DF00212432 /* PyeongChang-Bold.otf in Resources */,
 				A48AC4252CA7E0DF00212432 /* PyeongChang-Regular.otf in Resources */,
 				A48AC4232CA7E0DF00212432 /* Pretendard-Regular.otf in Resources */,
+				A4C8AD182CA80A8900FBDB01 /* Colors.xcassets in Resources */,
 				A48AC3F42CA7D56100212432 /* Base in Resources */,
 				A48AC4222CA7E0DF00212432 /* Pretendard-SemiBold.otf in Resources */,
 			);
@@ -285,9 +339,15 @@
 				A48AC4182CA7DF2200212432 /* SizeLiterals.swift in Sources */,
 				A48AC4152CA7DDBF00212432 /* HeaderConstant.swift in Sources */,
 				A48AC3E82CA7D56000212432 /* AppDelegate.swift in Sources */,
+				A4C8AD262CA80CCD00FBDB01 /* CustomTextField.swift in Sources */,
+				A4C8AD1E2CA80ACC00FBDB01 /* LoginView.swift in Sources */,
+				A4C8AD212CA80B3C00FBDB01 /* CustomNavigationBar.swift in Sources */,
 				A48AC4132CA7DDA900212432 /* BaseTargetType.swift in Sources */,
 				A48AC40F2CA7DB2400212432 /* URLConstant.swift in Sources */,
+				A4C8AD242CA80BE700FBDB01 /* UIView+.swift in Sources */,
 				A48AC3EA2CA7D56000212432 /* SceneDelegate.swift in Sources */,
+				A4C8AD282CA80D7400FBDB01 /* UITextField+.swift in Sources */,
+				A4C8AD1C2CA80AC600FBDB01 /* LoginViewController.swift in Sources */,
 				A48AC4112CA7DB2F00212432 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
