@@ -55,6 +55,8 @@
 		A4C8AD522CA8227300FBDB01 /* EmotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD512CA8227300FBDB01 /* EmotionModel.swift */; };
 		A4C8AD542CA829FF00FBDB01 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD532CA829FF00FBDB01 /* UILabel+.swift */; };
 		A4C8AD562CA834F000FBDB01 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD552CA834F000FBDB01 /* UITextView+.swift */; };
+		A4C8AD5A2CA83ACC00FBDB01 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD592CA83ACC00FBDB01 /* HomeView.swift */; };
+		A4C8AD5C2CA83AD300FBDB01 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD5B2CA83AD300FBDB01 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,8 @@
 		A4C8AD512CA8227300FBDB01 /* EmotionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionModel.swift; sourceTree = "<group>"; };
 		A4C8AD532CA829FF00FBDB01 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		A4C8AD552CA834F000FBDB01 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
+		A4C8AD592CA83ACC00FBDB01 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A4C8AD5B2CA83AD300FBDB01 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +156,7 @@
 		A48AC4042CA7D67200212432 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A4C8AD482CA8205D00FBDB01 /* Home */,
+				A4C8AD482CA8205D00FBDB01 /* Main */,
 				A4C8AD3F2CA81D0100FBDB01 /* Mypage */,
 				A4C8AD332CA815EE00FBDB01 /* Record */,
 				A4C8AD1F2CA80B2D00FBDB01 /* Common */,
@@ -339,12 +343,13 @@
 			path = Mypage;
 			sourceTree = "<group>";
 		};
-		A4C8AD482CA8205D00FBDB01 /* Home */ = {
+		A4C8AD482CA8205D00FBDB01 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A4C8AD572CA83A4B00FBDB01 /* Home */,
 				A4C8AD492CA8206100FBDB01 /* DreamWrite */,
 			);
-			path = Home;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		A4C8AD492CA8206100FBDB01 /* DreamWrite */ = {
@@ -356,6 +361,15 @@
 				A4C8AD4C2CA8207D00FBDB01 /* DreamWriteViewController.swift */,
 			);
 			path = DreamWrite;
+			sourceTree = "<group>";
+		};
+		A4C8AD572CA83A4B00FBDB01 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD592CA83ACC00FBDB01 /* HomeView.swift */,
+				A4C8AD5B2CA83AD300FBDB01 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +469,7 @@
 				A48AC4292CA7F98F00212432 /* AuthService.swift in Sources */,
 				A4C8AD522CA8227300FBDB01 /* EmotionModel.swift in Sources */,
 				A4C8AD2D2CA8112B00FBDB01 /* SignupView.swift in Sources */,
+				A4C8AD5C2CA83AD300FBDB01 /* HomeViewController.swift in Sources */,
 				A48AC40D2CA7DB0B00212432 /* NetworkLoggerPlugin.swift in Sources */,
 				A48AC4182CA7DF2200212432 /* SizeLiterals.swift in Sources */,
 				A48AC4152CA7DDBF00212432 /* HeaderConstant.swift in Sources */,
@@ -481,6 +496,7 @@
 				A4C8AD1C2CA80AC600FBDB01 /* LoginViewController.swift in Sources */,
 				A4C8AD4B2CA8207500FBDB01 /* DreamWriteView.swift in Sources */,
 				A48AC4112CA7DB2F00212432 /* Config.swift in Sources */,
+				A4C8AD5A2CA83ACC00FBDB01 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
