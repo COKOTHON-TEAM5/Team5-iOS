@@ -1,0 +1,43 @@
+//
+//  TabBarItem.swift
+//  Team5-Project
+//
+//  Created by 고아라 on 9/28/24.
+//
+
+import UIKit
+
+enum TabBarItemType: Int, CaseIterable {
+    case record
+    case home
+    case myPage
+}
+
+extension TabBarItemType {
+    
+    var unSelectedIcon: UIImage {
+        switch self {
+        case .home:
+            return .icHomeUnselected
+        case .record:
+            return .icRecordUnselected
+        case .myPage:
+            return .icMypageUnselected
+        }
+    }
+    
+    var selectedIcon: UIImage {
+        switch self {
+        case .home:
+            return .icHomeSelected
+        case .record:
+            return .icRecordSelected
+        case .myPage:
+            return .icMypageSelected
+        }
+    }
+    
+    func setTabBarItem() -> UITabBarItem {
+        return UITabBarItem(title: "", image: unSelectedIcon, selectedImage: selectedIcon)
+    }
+}

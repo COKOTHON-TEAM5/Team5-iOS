@@ -38,6 +38,8 @@
 		A4C8AD282CA80D7400FBDB01 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD272CA80D7400FBDB01 /* UITextField+.swift */; };
 		A4C8AD2B2CA8112200FBDB01 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD2A2CA8112200FBDB01 /* SignupViewController.swift */; };
 		A4C8AD2D2CA8112B00FBDB01 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD2C2CA8112B00FBDB01 /* SignupView.swift */; };
+		A4C8AD302CA814B200FBDB01 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD2F2CA814B200FBDB01 /* TabBarItem.swift */; };
+		A4C8AD322CA8156C00FBDB01 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD312CA8156C00FBDB01 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		A4C8AD272CA80D7400FBDB01 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		A4C8AD2A2CA8112200FBDB01 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A4C8AD2C2CA8112B00FBDB01 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		A4C8AD2F2CA814B200FBDB01 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		A4C8AD312CA8156C00FBDB01 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,8 +221,8 @@
 		A4C8AD192CA80AB200FBDB01 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				A4C8AD292CA8110E00FBDB01 /* Signup */,
 				A4C8AD1A2CA80AB700FBDB01 /* Login */,
+				A4C8AD292CA8110E00FBDB01 /* Signup */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -235,6 +239,7 @@
 		A4C8AD1F2CA80B2D00FBDB01 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A4C8AD2E2CA814A300FBDB01 /* TabBar */,
 				A4C8AD202CA80B3C00FBDB01 /* CustomNavigationBar.swift */,
 				A4C8AD252CA80CCD00FBDB01 /* CustomTextField.swift */,
 			);
@@ -257,6 +262,15 @@
 				A4C8AD2A2CA8112200FBDB01 /* SignupViewController.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		A4C8AD2E2CA814A300FBDB01 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD2F2CA814B200FBDB01 /* TabBarItem.swift */,
+				A4C8AD312CA8156C00FBDB01 /* TabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,11 +372,13 @@
 				A4C8AD262CA80CCD00FBDB01 /* CustomTextField.swift in Sources */,
 				A4C8AD1E2CA80ACC00FBDB01 /* LoginView.swift in Sources */,
 				A4C8AD212CA80B3C00FBDB01 /* CustomNavigationBar.swift in Sources */,
+				A4C8AD322CA8156C00FBDB01 /* TabBarController.swift in Sources */,
 				A48AC4132CA7DDA900212432 /* BaseTargetType.swift in Sources */,
 				A48AC40F2CA7DB2400212432 /* URLConstant.swift in Sources */,
 				A4C8AD242CA80BE700FBDB01 /* UIView+.swift in Sources */,
 				A48AC3EA2CA7D56000212432 /* SceneDelegate.swift in Sources */,
 				A4C8AD282CA80D7400FBDB01 /* UITextField+.swift in Sources */,
+				A4C8AD302CA814B200FBDB01 /* TabBarItem.swift in Sources */,
 				A4C8AD1C2CA80AC600FBDB01 /* LoginViewController.swift in Sources */,
 				A48AC4112CA7DB2F00212432 /* Config.swift in Sources */,
 			);
