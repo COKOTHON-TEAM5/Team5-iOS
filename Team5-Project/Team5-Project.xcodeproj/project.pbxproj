@@ -45,6 +45,10 @@
 		A4C8AD392CA8163500FBDB01 /* RecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD382CA8163500FBDB01 /* RecordCollectionViewCell.swift */; };
 		A4C8AD3B2CA818F000FBDB01 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD3A2CA818F000FBDB01 /* NSObject+.swift */; };
 		A4C8AD3E2CA81A7700FBDB01 /* UICollectionViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD3D2CA81A7700FBDB01 /* UICollectionViewRegisterable.swift */; };
+		A4C8AD412CA81D1000FBDB01 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD402CA81D1000FBDB01 /* MypageViewController.swift */; };
+		A4C8AD432CA81D1600FBDB01 /* MypageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD422CA81D1600FBDB01 /* MypageView.swift */; };
+		A4C8AD452CA81D2300FBDB01 /* MypageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD442CA81D2300FBDB01 /* MypageCollectionViewCell.swift */; };
+		A4C8AD472CA81D5A00FBDB01 /* MypageMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD462CA81D5A00FBDB01 /* MypageMenuModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +89,10 @@
 		A4C8AD382CA8163500FBDB01 /* RecordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4C8AD3A2CA818F000FBDB01 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
 		A4C8AD3D2CA81A7700FBDB01 /* UICollectionViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewRegisterable.swift; sourceTree = "<group>"; };
+		A4C8AD402CA81D1000FBDB01 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		A4C8AD422CA81D1600FBDB01 /* MypageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageView.swift; sourceTree = "<group>"; };
+		A4C8AD442CA81D2300FBDB01 /* MypageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4C8AD462CA81D5A00FBDB01 /* MypageMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,7 @@
 		A48AC4042CA7D67200212432 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A4C8AD3F2CA81D0100FBDB01 /* Mypage */,
 				A4C8AD332CA815EE00FBDB01 /* Record */,
 				A4C8AD1F2CA80B2D00FBDB01 /* Common */,
 				A4C8AD192CA80AB200FBDB01 /* Auth */,
@@ -304,6 +313,17 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		A4C8AD3F2CA81D0100FBDB01 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				A4C8AD462CA81D5A00FBDB01 /* MypageMenuModel.swift */,
+				A4C8AD442CA81D2300FBDB01 /* MypageCollectionViewCell.swift */,
+				A4C8AD422CA81D1600FBDB01 /* MypageView.swift */,
+				A4C8AD402CA81D1000FBDB01 /* MypageViewController.swift */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -390,8 +410,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C8AD432CA81D1600FBDB01 /* MypageView.swift in Sources */,
 				A48AC41A2CA7DF5900212432 /* FontLiterals.swift in Sources */,
 				A48AC4272CA7F98800212432 /* AuthTarget.swift in Sources */,
+				A4C8AD472CA81D5A00FBDB01 /* MypageMenuModel.swift in Sources */,
 				A48AC3EC2CA7D56000212432 /* ViewController.swift in Sources */,
 				A4C8AD3E2CA81A7700FBDB01 /* UICollectionViewRegisterable.swift in Sources */,
 				A48AC4292CA7F98F00212432 /* AuthService.swift in Sources */,
@@ -412,7 +434,9 @@
 				A4C8AD352CA815FE00FBDB01 /* RecordViewController.swift in Sources */,
 				A4C8AD242CA80BE700FBDB01 /* UIView+.swift in Sources */,
 				A48AC3EA2CA7D56000212432 /* SceneDelegate.swift in Sources */,
+				A4C8AD452CA81D2300FBDB01 /* MypageCollectionViewCell.swift in Sources */,
 				A4C8AD3B2CA818F000FBDB01 /* NSObject+.swift in Sources */,
+				A4C8AD412CA81D1000FBDB01 /* MypageViewController.swift in Sources */,
 				A4C8AD282CA80D7400FBDB01 /* UITextField+.swift in Sources */,
 				A4C8AD302CA814B200FBDB01 /* TabBarItem.swift in Sources */,
 				A4C8AD1C2CA80AC600FBDB01 /* LoginViewController.swift in Sources */,
