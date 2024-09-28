@@ -36,12 +36,16 @@ extension RecordViewController {
         cv.delegate = self
         cv.dataSource = self
     }
+    
+    func pushToRecordDetailVC() {
+        self.navigationController?.pushViewController(RecordDetailViewController(), animated: true)
+    }
 }
 
 
 extension RecordViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
+        pushToRecordDetailVC()
     }
 }
 
