@@ -15,16 +15,15 @@ enum URLConstant {
     
     // Auth
     
-    static let signupURL = baseURL + "member/signup"
-    static let loginURL = baseURL + "member/login"
-    static let checkUsernameURL = baseURL + "member/check-username"
+    static let signupURL = "member/signup"
+    static let loginURL = "member/login"
+    static let checkUsernameURL = "member/check-username"
     
     // Home
     
-    static let sleepStartURL = baseURL + "diary/sleep/start"
-    static let sleepEndURL = baseURL + "diary/sleep/end"
-    static let skipURL = baseURL + "diary/skip"
-    
-    // Record
+    static let sleepStartURL = "diary/sleep/start"
+    static let sleepEndURL = "diary/sleep/end"
+    static let skipURL = "diary/skip"
+    static let writeURL = "diary/write"
     
 }

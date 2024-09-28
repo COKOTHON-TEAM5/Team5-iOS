@@ -45,8 +45,7 @@ extension LoginViewController {
     
     @objc
     func loginTapped() {
-        print(loginView.idTextField.text ?? "")
-        print(loginView.pwTextField.text ?? "")
+        self.postLogin(dto: LoginRequestDto(username: loginView.idTextField.text ?? "", password: loginView.pwTextField.text ?? ""))
     }
     
     func setGesture() {
@@ -56,6 +55,16 @@ extension LoginViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func changeRootToTabVC() {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            if let window = windowScene.windows.first {
+                let spalshVC = TabBarController()
+                let navigationController = UINavigationController(rootViewController: spalshVC)
+                window.rootViewController = navigationController
+            }
+        }
     }
 }
 
@@ -75,5 +84,17 @@ extension LoginViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.becomeFirstResponder()
+    }
+}
+
+extension LoginViewController {
+    
+    func postLogin(dto: LoginRequestDto) {
+        AuthService.shared.postLogin(requestDto: dto){ response in
+            guard let data = response?.data else { return }
+            UserManager.shared.updateToken(data.token)
+            UserManager.shared.updateUserName(data.nickname)
+            self.changeRootToTabVC()
+        }
     }
 }

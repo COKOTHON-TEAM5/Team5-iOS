@@ -25,6 +25,7 @@ final class DreamWriteViewController: UIViewController {
         
         setUI()
         setDelegate()
+        setAddTarget()
     }
 }
 
@@ -37,6 +38,16 @@ extension DreamWriteViewController {
     func setDelegate() {
         cv.delegate = self
         cv.dataSource = self
+    }
+    
+    func setAddTarget() {
+        dreamWriteView.dreamWritebutton.addTarget(self, action: #selector(writeButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc
+    func writeButtonTapped() {
+        guard let emotionName = Emotion.name(for: self.selectedEmotionIndex) else { return }
+        postWrite(dto: WriteRequstDto(title: dreamWriteView.titleTextField.text ?? "", emotion: emotionName, content: dreamWriteView.contentTextView.text ?? ""))
     }
 }
 
@@ -66,5 +77,21 @@ extension DreamWriteViewController: UICollectionViewDataSource {
         let cell =  DreamWriteCollectionViewCell.dequeueReusableCell(collectionView: cv, indexPath: indexPath)
         cell.bindEmotion(model: model[indexPath.item])
         return cell
+    }
+}
+
+extension DreamWriteViewController: BackButtonProtocol {
+    
+    func tapBackButton() {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension DreamWriteViewController {
+    
+    func postWrite(dto: WriteRequstDto) {
+        DiaryService.shared.postWrite(requestDto: dto) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

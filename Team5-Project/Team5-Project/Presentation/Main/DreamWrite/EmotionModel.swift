@@ -8,7 +8,7 @@
 import UIKit
 
 @frozen
-enum Emotion {
+enum Emotion: String {
     case jealous
     case happy
     case angry
@@ -69,7 +69,17 @@ enum Emotion {
             return "무서운"
         }
     }
+    
+    static func name(for index: Int) -> String? {
+        let emotions = Emotion.allCases // 모든 케이스를 가져옵니다
+        guard index >= 0 && index < emotions.count else {
+            return nil // 유효하지 않은 인덱스일 경우 nil 반환
+        }
+        return emotions[index].rawValue // 해당 Emotion의 raw value 반환
+    }
 }
+
+extension Emotion: CaseIterable {}
 
 extension Emotion {
     static func emotionData() -> [(UIImage, String)] {

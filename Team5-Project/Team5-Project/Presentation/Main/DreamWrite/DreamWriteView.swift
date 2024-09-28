@@ -71,7 +71,7 @@ final class DreamWriteView: UIView {
         return cv
     }()
     
-    private let titleTextField = CustomTextField(placeHolder: "꿈 제목")
+    let titleTextField = CustomTextField(placeHolder: "꿈 제목")
     
     private let contentBackView = {
         let view = UIView()
@@ -80,7 +80,7 @@ final class DreamWriteView: UIView {
         return view
     }()
     
-    private let contentTextView = {
+    let contentTextView = {
         let textView = UITextView()
         textView.text = "어떤 꿈을 꿨는지 적어주세요!"
         textView.font = .fontGuide(type: .PretandardRegular, size: 14)
@@ -91,7 +91,7 @@ final class DreamWriteView: UIView {
         return textView
     }()
     
-    private let dreamWritebutton = {
+    let dreamWritebutton = {
         let button = UIButton()
         button.backgroundColor = .mainBlue
         button.setTitle("등록하기", for: .normal)
