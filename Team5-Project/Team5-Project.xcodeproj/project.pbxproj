@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0335188D2CA8468A00F60B61 /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335188C2CA8468100F60B61 /* RecordDetailViewController.swift */; };
 		0335188F2CA846A600F60B61 /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0335188E2CA846A200F60B61 /* RecordDetailView.swift */; };
+		033518A12CA8ACB900F60B61 /* RecordTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033518A02CA8ACAB00F60B61 /* RecordTarget.swift */; };
+		033518A32CA8BA5B00F60B61 /* RecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033518A22CA8BA5700F60B61 /* RecordService.swift */; };
+		033518A52CA8BA8200F60B61 /* RecordResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033518A42CA8BA7D00F60B61 /* RecordResponseDto.swift */; };
 		A48AC3E82CA7D56000212432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48AC3E72CA7D56000212432 /* AppDelegate.swift */; };
 		A48AC3EA2CA7D56000212432 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48AC3E92CA7D56000212432 /* SceneDelegate.swift */; };
 		A48AC3EC2CA7D56000212432 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48AC3EB2CA7D56000212432 /* ViewController.swift */; };
@@ -81,6 +84,10 @@
 /* Begin PBXFileReference section */
 		0335188C2CA8468100F60B61 /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		0335188E2CA846A200F60B61 /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
+		0335189F2CA8ABD000F60B61 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		033518A02CA8ACAB00F60B61 /* RecordTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTarget.swift; sourceTree = "<group>"; };
+		033518A22CA8BA5700F60B61 /* RecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordService.swift; sourceTree = "<group>"; };
+		033518A42CA8BA7D00F60B61 /* RecordResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordResponseDto.swift; sourceTree = "<group>"; };
 		A48AC3E42CA7D56000212432 /* Team5-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Team5-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48AC3E72CA7D56000212432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A48AC3E92CA7D56000212432 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,7 +143,6 @@
 		A4C8AD662CA84C7F00FBDB01 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		A4C8AD682CA84C8E00FBDB01 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		A4C8AD6A2CA84F8800FBDB01 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
-		A4C8AD6D2CA86AF200FBDB01 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		A4C8AD6F2CA8807900FBDB01 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		A4C8AD722CA88C9A00FBDB01 /* SignupRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequestDto.swift; sourceTree = "<group>"; };
 		A4C8AD742CA88CEC00FBDB01 /* SignupResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponseDto.swift; sourceTree = "<group>"; };
@@ -197,7 +203,7 @@
 				A48AC4052CA7D67900212432 /* Network */,
 				A48AC4042CA7D67200212432 /* Presentation */,
 				A48AC3F52CA7D56100212432 /* Info.plist */,
-				A4C8AD6D2CA86AF200FBDB01 /* Config.xcconfig */,
+				0335189F2CA8ABD000F60B61 /* Config.xcconfig */,
 			);
 			path = "Team5-Project";
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 		A48AC4092CA7D9A000212432 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				033518A22CA8BA5700F60B61 /* RecordService.swift */,
 				A48AC4282CA7F98F00212432 /* AuthService.swift */,
 				A4C8AD7E2CA89D9300FBDB01 /* DiaryService.swift */,
 			);
@@ -270,6 +277,7 @@
 		A48AC40A2CA7D9A600212432 /* Target */ = {
 			isa = PBXGroup;
 			children = (
+				033518A02CA8ACAB00F60B61 /* RecordTarget.swift */,
 				A48AC4262CA7F98800212432 /* AuthTarget.swift */,
 				A4C8AD7C2CA89D1C00FBDB01 /* DiaryTarget.swift */,
 			);
@@ -467,6 +475,7 @@
 		A4C8AD712CA88C8F00FBDB01 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				033518A42CA8BA7D00F60B61 /* RecordResponseDto.swift */,
 				A4C8AD722CA88C9A00FBDB01 /* SignupRequestDto.swift */,
 				A4C8AD742CA88CEC00FBDB01 /* SignupResponseDto.swift */,
 				A4C8AD762CA88DDE00FBDB01 /* LoginRequestDto.swift */,
@@ -580,12 +589,15 @@
 				A4C8AD472CA81D5A00FBDB01 /* MypageMenuModel.swift in Sources */,
 				A48AC3EC2CA7D56000212432 /* ViewController.swift in Sources */,
 				A4C8AD3E2CA81A7700FBDB01 /* UICollectionViewRegisterable.swift in Sources */,
+				033518A12CA8ACB900F60B61 /* RecordTarget.swift in Sources */,
 				A4C8AD752CA88CED00FBDB01 /* SignupResponseDto.swift in Sources */,
+				033518A32CA8BA5B00F60B61 /* RecordService.swift in Sources */,
 				A48AC4292CA7F98F00212432 /* AuthService.swift in Sources */,
 				A4C8AD522CA8227300FBDB01 /* EmotionModel.swift in Sources */,
 				A4C8AD2D2CA8112B00FBDB01 /* SignupView.swift in Sources */,
 				A4C8AD5C2CA83AD300FBDB01 /* HomeViewController.swift in Sources */,
 				A4C8AD702CA8807900FBDB01 /* GeneralResponse.swift in Sources */,
+				033518A52CA8BA8200F60B61 /* RecordResponseDto.swift in Sources */,
 				A48AC40D2CA7DB0B00212432 /* NetworkLoggerPlugin.swift in Sources */,
 				A48AC4182CA7DF2200212432 /* SizeLiterals.swift in Sources */,
 				A48AC4152CA7DDBF00212432 /* HeaderConstant.swift in Sources */,
@@ -642,6 +654,7 @@
 /* Begin XCBuildConfiguration section */
 		A48AC3F62CA7D56100212432 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0335189F2CA8ABD000F60B61 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -705,6 +718,7 @@
 		};
 		A48AC3F72CA7D56100212432 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0335189F2CA8ABD000F60B61 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -761,7 +775,7 @@
 		};
 		A48AC3F92CA7D56100212432 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4C8AD6D2CA86AF200FBDB01 /* Config.xcconfig */;
+			baseConfigurationReference = 0335189F2CA8ABD000F60B61 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -792,6 +806,7 @@
 		};
 		A48AC3FA2CA7D56100212432 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0335189F2CA8ABD000F60B61 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

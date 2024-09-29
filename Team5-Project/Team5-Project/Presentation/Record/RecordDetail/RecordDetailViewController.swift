@@ -20,6 +20,8 @@ final class RecordDetailViewController: UIViewController {
     
     // MARK: - Properties
     
+    var data: Diary = Diary(id: 0, date: "", sleepTime: 0, emotion: "", title: "", content: "")
+    
     // MARK: - Initializer
     
     // MARK: - View Life Cycle
@@ -28,6 +30,7 @@ final class RecordDetailViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        recordDetailView.setDataBind(data)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,8 +51,8 @@ extension RecordDetailViewController {
             $0.isTitleViewIncluded = true
             $0.isTitleLabelIncluded = "꿈 기록"
             $0.backgroundColor = .mainBackground
+            $0.delegate = self
         }
-        
     }
     
     // MARK: - Layout Helper
@@ -74,5 +77,15 @@ extension RecordDetailViewController {
     
     // MARK: - Methods
     
+    func popToRecordListVC() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: - @objc Methods
+}
+
+extension RecordDetailViewController: BackButtonProtocol {
+    func tapBackButton() {
+        popToRecordListVC() 
+    }
 }

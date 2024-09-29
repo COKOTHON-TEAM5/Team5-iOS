@@ -70,6 +70,10 @@ private extension TabBarController {
         tabBar.backgroundColor = .mainBackground
         tabBar.tintColor = .mainSkyBlue
         tabBar.unselectedItemTintColor = .gray700
+        tabBar.layer.shadowColor = UIColor.gray700.cgColor
+        tabBar.layer.shadowOpacity = 1
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+        tabBar.layer.shadowRadius = 1
     }
     
     func getSafeAreaBottomHeight() -> CGFloat {

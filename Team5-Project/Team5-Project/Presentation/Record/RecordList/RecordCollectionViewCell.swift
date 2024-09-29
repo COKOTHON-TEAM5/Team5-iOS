@@ -86,7 +86,25 @@ private extension RecordCollectionViewCell {
 
 extension RecordCollectionViewCell {
     
-//    func bindRecord(model: ) {
-//    }
+    func bindRecord(_ model: Diary) {
+        recordTitle.text = model.title
+        recordIcon.image = Emotion.image(for: model.emotion)
+        
+        let dateString = model.date
+
+        // DateFormatter 생성
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        // 문자열을 Date 객체로 변환
+        if let date = dateFormatter.date(from: dateString) {
+            // 새로운 출력 형식 설정
+            dateFormatter.dateFormat = "yyyy년 M월 d일"
+            
+            let formattedDate = dateFormatter.string(from: date)
+            recordDate.text = formattedDate
+        }
+        
+    }
 }
 
