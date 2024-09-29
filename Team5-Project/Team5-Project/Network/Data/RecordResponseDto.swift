@@ -10,8 +10,7 @@ import Foundation
 struct RecordResponseDto: Codable {
     let id: Int
     let date: String
-    let sleepTime: String
-    let wakeupTime: String
+    let sleepTime: Int
     let emotion: String
     let title: String
     let content: String

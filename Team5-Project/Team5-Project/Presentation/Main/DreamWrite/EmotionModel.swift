@@ -7,7 +7,6 @@
 
 import UIKit
 
-@frozen
 enum Emotion: String {
     case jealous
     case happy
@@ -71,11 +70,15 @@ enum Emotion: String {
     }
     
     static func name(for index: Int) -> String? {
-        let emotions = Emotion.allCases // 모든 케이스를 가져옵니다
+        let emotions = Emotion.allCases
         guard index >= 0 && index < emotions.count else {
-            return nil // 유효하지 않은 인덱스일 경우 nil 반환
+            return nil
         }
-        return emotions[index].rawValue // 해당 Emotion의 raw value 반환
+        return emotions[index].rawValue
+    }
+    
+    static func image(for title: String) -> UIImage? {
+        return Emotion.allCases.first { $0.emotionTitle == title }?.emotionImg
     }
 }
 
@@ -97,3 +100,4 @@ extension Emotion {
         ]
     }
 }
+

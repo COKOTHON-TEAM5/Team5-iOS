@@ -20,6 +20,8 @@ final class RecordDetailViewController: UIViewController {
     
     // MARK: - Properties
     
+    var data: RecordResponseDto = RecordResponseDto(id: 0, date: "", sleepTime: 0, emotion: "", title: "", content: "")
+    
     // MARK: - Initializer
     
     // MARK: - View Life Cycle
@@ -28,6 +30,7 @@ final class RecordDetailViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        recordDetailView.setDataBind(data)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -156,6 +156,15 @@ extension RecordDetailView {
         let viewSize = Int(string.size(withAttributes: [NSAttributedString.Key.font: UIFont.fontGuide(type: .PyeongChangBold, size: 14)]).height + 60)
         return viewSize
     }
+    
+    func setDataBind(_ model: RecordResponseDto) {
+        emotionImageView.image = Emotion.image(for: model.emotion)
+        emotionDreamLabel.text = "이날은 \(model.emotion) 꿈을 꿨어!"
+        emotionDreamLabel.partColorChange(targetString: model.emotion, textColor: .blue100)
+        dreamDateLabel.text = model.date
+        dreamTitleLabel.text = model.title
+        dreamDetailLabel.text = model.content
+    }
 
     
     // MARK: - @objc Methods

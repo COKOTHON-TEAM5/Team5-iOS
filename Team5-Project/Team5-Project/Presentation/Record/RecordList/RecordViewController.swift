@@ -13,6 +13,7 @@ final class RecordViewController: UIViewController {
     
     var year: Int = 2024
     var month: Int = 9
+    var recordData: [RecordResponseDto] = []
     
     // MARK: - UI Components Property
     
@@ -27,7 +28,6 @@ final class RecordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUI()
         setDelegate()
         getRecord()
@@ -47,8 +47,10 @@ extension RecordViewController {
         cv.dataSource = self
     }
     
-    func pushToRecordDetailVC() {
-        self.navigationController?.pushViewController(RecordDetailViewController(), animated: true)
+    func pushToRecordDetailVC(_ recordData: RecordResponseDto) {
+        let vc = RecordDetailViewController()
+        vc.data = recordData
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func setDate() {
@@ -102,12 +104,15 @@ extension RecordViewController {
 
 
 extension RecordViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        pushToRecordDetailVC()
+        let recordDetailData = recordData[indexPath.item]
+        pushToRecordDetailVC(recordDetailData)
     }
 }
 
 extension RecordViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
@@ -121,9 +126,9 @@ extension RecordViewController: UICollectionViewDataSource {
 extension RecordViewController {
     
     func getRecord() {
-        
         RecordService.shared.getRecord(year: self.year, month: self.month) { response in
             guard let data = response?.data else { return }
+            self.recordData = data
             print(data)
         }
     }

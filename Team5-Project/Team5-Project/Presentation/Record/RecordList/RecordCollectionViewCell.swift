@@ -86,7 +86,10 @@ private extension RecordCollectionViewCell {
 
 extension RecordCollectionViewCell {
     
-//    func bindRecord(model: ) {
-//    }
+    func bindRecord(_ model: RecordResponseDto) {
+        recordTitle.text = model.title
+        recordDate.text = model.date
+        recordIcon.image = Emotion.image(for: model.emotion)
+    }
 }
 
