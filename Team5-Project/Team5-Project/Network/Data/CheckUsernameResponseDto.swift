@@ -8,7 +8,5 @@
 import Foundation
 
 struct CheckUsernameResponseDto: Codable {
-    let code: Int
-    let message: String
-    let data: Bool
+    let uniqueness: Bool
 }

@@ -25,5 +25,5 @@ enum URLConstant {
     static let sleepEndURL = "diary/sleep/end"
     static let skipURL = "diary/skip"
     static let writeURL = "diary/write"
-    
+    static let reportURL = "diary/report"
 }

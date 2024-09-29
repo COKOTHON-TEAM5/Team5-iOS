@@ -11,7 +11,7 @@ import SnapKit
 
 final class DreamWriteView: UIView {
     
-    private let navigationBar = {
+    let navigationBar = {
         let navigationBar = CustomNavigationBar()
         navigationBar.isBackButtonIncluded = true
         navigationBar.isTitleViewIncluded = true
@@ -32,7 +32,7 @@ final class DreamWriteView: UIView {
         return label
     }()
     
-    private let todaySleepTime = {
+    let todaySleepTime = {
         let label = UILabel()
         label.text = "총 수면 시간은 9시간"
         label.textColor = .white

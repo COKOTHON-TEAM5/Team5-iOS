@@ -17,7 +17,7 @@ final class MypageView: UIView {
     
     private let userNameLabel = {
         let label = UILabel()
-        label.text = "눈아파"
+        label.text = UserManager.shared.getUserName
         label.textColor = .white
         label.font = .fontGuide(type: .PyeongChangBold, size: 24)
         return label
