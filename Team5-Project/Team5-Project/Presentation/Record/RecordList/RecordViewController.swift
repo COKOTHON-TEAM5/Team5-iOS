@@ -13,7 +13,7 @@ final class RecordViewController: UIViewController {
     
     var year: Int = 2024
     var month: Int = 9
-    var recordData: [RecordResponseDto] = []
+    var recordData: RecordResponseDto = RecordResponseDto(diaries: [])
     
     // MARK: - UI Components Property
     
@@ -34,6 +34,10 @@ final class RecordViewController: UIViewController {
         setDate()
         setButton()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getRecord()
+    }
 }
 
 extension RecordViewController {
@@ -47,7 +51,7 @@ extension RecordViewController {
         cv.dataSource = self
     }
     
-    func pushToRecordDetailVC(_ recordData: RecordResponseDto) {
+    func pushToRecordDetailVC(_ recordData: Diary) {
         let vc = RecordDetailViewController()
         vc.data = recordData
         self.navigationController?.pushViewController(vc, animated: true)
@@ -106,7 +110,7 @@ extension RecordViewController {
 extension RecordViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let recordDetailData = recordData[indexPath.item]
+        let recordDetailData = recordData.diaries[indexPath.item]
         pushToRecordDetailVC(recordDetailData)
     }
 }
@@ -114,11 +118,12 @@ extension RecordViewController: UICollectionViewDelegate {
 extension RecordViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return recordData.diaries.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =  RecordCollectionViewCell.dequeueReusableCell(collectionView: cv, indexPath: indexPath)
+        cell.bindRecord(recordData.diaries[indexPath.item])
         return cell
     }
 }
@@ -129,7 +134,8 @@ extension RecordViewController {
         RecordService.shared.getRecord(year: self.year, month: self.month) { response in
             guard let data = response?.data else { return }
             self.recordData = data
-            print(data)
+            self.cv.reloadData()
+            print("🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥🐥", self.recordData)
         }
     }
 }

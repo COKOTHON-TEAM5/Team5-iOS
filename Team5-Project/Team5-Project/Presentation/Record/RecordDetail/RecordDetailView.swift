@@ -140,11 +140,12 @@ extension RecordDetailView {
         dreamDetailView.snp.makeConstraints {
             $0.top.equalTo(dreamTitleView.snp.bottom).offset(12)
             $0.horizontalEdges.equalToSuperview().inset(16)
+            
             $0.height.equalTo(setDreamDetailViewSize(dreamDetailLabel.text ?? ""))
         }
         
         dreamDetailLabel.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().inset(12)
+            $0.top.equalToSuperview().inset(12)
             $0.horizontalEdges.equalToSuperview().inset(12)
         }
     }
@@ -153,15 +154,32 @@ extension RecordDetailView {
     
     private func setDreamDetailViewSize(_ text: String) -> Int {
         let string = text
-        let viewSize = Int(string.size(withAttributes: [NSAttributedString.Key.font: UIFont.fontGuide(type: .PyeongChangBold, size: 14)]).height + 60)
+        let viewSize = Int(string.size(withAttributes: [NSAttributedString.Key.font: UIFont.fontGuide(type: .PyeongChangBold, size: 14)]).height + 30)
         return viewSize
     }
     
-    func setDataBind(_ model: RecordResponseDto) {
+    func setDataBind(_ model: Diary) {
         emotionImageView.image = Emotion.image(for: model.emotion)
         emotionDreamLabel.text = "이날은 \(model.emotion) 꿈을 꿨어!"
         emotionDreamLabel.partColorChange(targetString: model.emotion, textColor: .blue100)
-        dreamDateLabel.text = model.date
+        dreamTimeLabel.text = "총 수면 시간은 \(model.sleepTime)시간"
+        dreamTimeLabel.partColorChange(targetString: "\(model.sleepTime)시간", textColor: .mainBlue)
+        
+        let dateString = model.date
+
+        // DateFormatter 생성
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        // 문자열을 Date 객체로 변환
+        if let date = dateFormatter.date(from: dateString) {
+            // 새로운 출력 형식 설정
+            dateFormatter.dateFormat = "yyyy년 M월 d일"
+            
+            let formattedDate = dateFormatter.string(from: date)
+            dreamDateLabel.text = formattedDate
+        }
+        
         dreamTitleLabel.text = model.title
         dreamDetailLabel.text = model.content
     }

@@ -7,11 +7,15 @@
 
 import Foundation
 
+// MARK: - DataClass
 struct RecordResponseDto: Codable {
+    let diaries: [Diary]
+}
+
+// MARK: - Diary
+struct Diary: Codable {
     let id: Int
     let date: String
     let sleepTime: Int
-    let emotion: String
-    let title: String
-    let content: String
+    let emotion, title, content: String
 }

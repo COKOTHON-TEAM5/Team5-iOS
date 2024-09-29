@@ -20,7 +20,7 @@ final class RecordDetailViewController: UIViewController {
     
     // MARK: - Properties
     
-    var data: RecordResponseDto = RecordResponseDto(id: 0, date: "", sleepTime: 0, emotion: "", title: "", content: "")
+    var data: Diary = Diary(id: 0, date: "", sleepTime: 0, emotion: "", title: "", content: "")
     
     // MARK: - Initializer
     
