@@ -10,6 +10,7 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     private let homeView = HomeView()
+    private var totalSleepTime: Int = 0
     
     // MARK: - Life Cycles
     
@@ -17,11 +18,24 @@ final class HomeViewController: UIViewController {
         self.view = homeView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        getReport()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
         setAddTarget()
+        getReport()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: NSNotification.Name("popHomeVC"),
+                                                  object: nil)
     }
 }
 
@@ -29,6 +43,11 @@ extension HomeViewController {
     
     func setUI() {
         self.navigationController?.navigationBar.isHidden = true
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(popHomeVC),
+                                               name: NSNotification.Name("popHomeVC"),
+                                               object: nil)
     }
     
     func setAddTarget() {
@@ -61,6 +80,7 @@ extension HomeViewController {
     @objc
     func completeButtonTapped() {
         let nav = DreamWriteViewController()
+        nav.totalSleepTime = self.totalSleepTime
         nav.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(nav, animated: true)
     }
@@ -70,6 +90,11 @@ extension HomeViewController {
         self.postSkip()
     }
     
+    @objc
+    func popHomeVC() {
+        self.getReport()
+    }
+    
 }
 
 extension HomeViewController {
@@ -77,21 +102,32 @@ extension HomeViewController {
     func postSleepStart(dto: SleepStartRequestDto) {
         DiaryService.shared.postSleepStart(requestDto: dto) { _ in
             print("sleep success")
-            self.homeView.setButton(status: 1)
+            self.getReport()
         }
     }
     
     func postSleepEnd(dto: SleepStartRequestDto) {
-        DiaryService.shared.postSleepStart(requestDto: dto) { _ in
+        DiaryService.shared.postSleepEnd(requestDto: dto) { _ in
             print("sleep end")
-            self.homeView.setButton(status: 2)
+            let nav = DreamWriteViewController()
+            nav.totalSleepTime = self.totalSleepTime
+            nav.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(nav, animated: true)
         }
     }
     
     func postSkip() {
         DiaryService.shared.postSkip { _ in
             print("sleep skip")
-            self.homeView.setButton(status: 0)
+            self.getReport()
+        }
+    }
+    
+    func getReport() {
+        DiaryService.shared.getReport { response in
+            guard let data = response?.data else { return }
+            self.totalSleepTime = data.sleepTime
+            self.homeView.bindHomeView(model: data)
         }
     }
 }

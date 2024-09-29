@@ -75,6 +75,7 @@
 		A4C8AD7F2CA89D9300FBDB01 /* DiaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD7E2CA89D9300FBDB01 /* DiaryService.swift */; };
 		A4C8AD812CA89DAF00FBDB01 /* EmptyDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD802CA89DAF00FBDB01 /* EmptyDto.swift */; };
 		A4C8AD832CA8A39C00FBDB01 /* WriteRequstDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD822CA8A39C00FBDB01 /* WriteRequstDto.swift */; };
+		A4C8AD852CA8B9C900FBDB01 /* ReportResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C8AD842CA8B9C900FBDB01 /* ReportResponseDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +147,7 @@
 		A4C8AD7E2CA89D9300FBDB01 /* DiaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryService.swift; sourceTree = "<group>"; };
 		A4C8AD802CA89DAF00FBDB01 /* EmptyDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDto.swift; sourceTree = "<group>"; };
 		A4C8AD822CA8A39C00FBDB01 /* WriteRequstDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteRequstDto.swift; sourceTree = "<group>"; };
+		A4C8AD842CA8B9C900FBDB01 /* ReportResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportResponseDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +474,7 @@
 				A4C8AD7A2CA89B3C00FBDB01 /* SleepStartRequestDto.swift */,
 				A4C8AD802CA89DAF00FBDB01 /* EmptyDto.swift */,
 				A4C8AD822CA8A39C00FBDB01 /* WriteRequstDto.swift */,
+				A4C8AD842CA8B9C900FBDB01 /* ReportResponseDto.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				A4C8AD352CA815FE00FBDB01 /* RecordViewController.swift in Sources */,
 				A4C8AD242CA80BE700FBDB01 /* UIView+.swift in Sources */,
 				A48AC3EA2CA7D56000212432 /* SceneDelegate.swift in Sources */,
+				A4C8AD852CA8B9C900FBDB01 /* ReportResponseDto.swift in Sources */,
 				A4C8AD452CA81D2300FBDB01 /* MypageCollectionViewCell.swift in Sources */,
 				A4C8AD612CA8491D00FBDB01 /* LogoView.swift in Sources */,
 				A4C8AD642CA84B2200FBDB01 /* SplashViewController.swift in Sources */,

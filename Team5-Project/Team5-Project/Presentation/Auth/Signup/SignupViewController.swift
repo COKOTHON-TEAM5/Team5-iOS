@@ -106,12 +106,12 @@ extension SignupViewController {
     }
     
     func checkUsername(name: String) {
-//        AuthService.shared.getCheckUsername(name: name) { response in
-//            print("sdkfkdkfkdsk")
-//            print(response ?? false)
-//            DispatchQueue.main.async {
-//                self.signupView.checkButton.isEnabled = !(response ?? false)
-//            }
-//        }
+        AuthService.shared.getCheckUsername(name: name) { response in
+            guard let data = response?.data else { return }
+            DispatchQueue.main.async {
+                self.signupView.checkButton.backgroundColor = data.uniqueness ? .gray200 : .mainSkyBlue
+                self.signupView.checkButton.isEnabled = !(data.uniqueness)
+            }
+        }
     }
 }

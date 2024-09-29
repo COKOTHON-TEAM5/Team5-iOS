@@ -18,24 +18,29 @@ final class AuthService {
     
     public private(set) var loginData: GeneralResponse<SignupResponseDto>?
     public private(set) var signupData: GeneralResponse<SignupResponseDto>?
-//    public private(set) var checkUserdata: GeneralResponse<>?
+    public private(set) var checkUserdata: GeneralResponse<CheckUsernameResponseDto>?
     
     // MARK: - GET
     
-//    func getCheckUsername(name: String,
-//                          completion: @escaping(CheckUsernameResponseDto?) -> Void) {
-//        authProvider.request(.getCheckUsername(username: name)) { [weak self] result in
-//            guard let self else { return }
-//            switch result {
-//            case .success(let response):
-//                guard let checkUserdata = self.checkUserdata else { return }
-//                completion(checkUserdata.data)
-//            case .failure(let err):
-//                print(err.localizedDescription)
-//                completion(nil)
-//            }
-//        }
-//    }
+    func getCheckUsername(name: String,
+                          completion: @escaping(GeneralResponse<CheckUsernameResponseDto>?) -> Void) {
+        authProvider.request(.getCheckUsername(username: name)) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let response):
+                do {
+                    self.checkUserdata = try response.map(GeneralResponse<CheckUsernameResponseDto>.self)
+                    guard let checkUserdata = self.checkUserdata else { return }
+                    completion(checkUserdata)
+                } catch let err {
+                    print(err.localizedDescription, 500)
+                }
+            case .failure(let err):
+                print(err.localizedDescription)
+                completion(nil)
+            }
+        }
+    }
     
     // MARK: - POST
     
@@ -70,7 +75,7 @@ final class AuthService {
                 do {
                     self.signupData = try response.map(GeneralResponse<SignupResponseDto>.self)
                     guard let signupData = self.signupData else { return }
-                    completion(loginData)
+                    completion(signupData)
                 } catch let err {
                     print(err.localizedDescription, 500)
                 }
