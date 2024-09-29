@@ -15,6 +15,7 @@ enum DiaryTarget {
     case postSleepEnd(sleepRequest: SleepStartRequestDto)
     case postSkip
     case postWrite(writeRequest: WriteRequstDto)
+    case getReport
 }
 
 extension DiaryTarget: BaseTargetType {
@@ -29,11 +30,18 @@ extension DiaryTarget: BaseTargetType {
             return URLConstant.skipURL
         case .postWrite:
             return URLConstant.writeURL
+        case .getReport:
+            return URLConstant.reportURL
         }
     }
     
     var method: Moya.Method {
-        return .post
+        switch self {
+        case .getReport:
+            return .get
+        default:
+            return .post
+        }
     }
     
     var task: Moya.Task {
@@ -46,6 +54,8 @@ extension DiaryTarget: BaseTargetType {
             return .requestPlain
         case .postWrite(let writeRequest):
             return .requestJSONEncodable(writeRequest)
+        case .getReport:
+            return .requestPlain
         }
     }
     

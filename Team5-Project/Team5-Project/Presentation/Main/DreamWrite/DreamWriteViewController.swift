@@ -13,6 +13,7 @@ final class DreamWriteViewController: UIViewController {
     private lazy var cv = dreamWriteView.collectionView
     private let model = Emotion.emotionData()
     private var selectedEmotionIndex: Int = 0
+    var totalSleepTime: Int = 0
     
     // MARK: - Life Cycles
     
@@ -33,11 +34,14 @@ extension DreamWriteViewController {
     
     func setUI() {
         self.navigationController?.navigationBar.isHidden = true
+        dreamWriteView.todaySleepTime.text = "총 수면 시간은 \(totalSleepTime)시간"
+        dreamWriteView.todaySleepTime.partColorChange(targetString: "\(totalSleepTime)시간", textColor: .mainSkyBlue)
     }
     
     func setDelegate() {
         cv.delegate = self
         cv.dataSource = self
+        dreamWriteView.navigationBar.delegate = self
     }
     
     func setAddTarget() {
@@ -48,6 +52,12 @@ extension DreamWriteViewController {
     func writeButtonTapped() {
         guard let emotionName = Emotion.name(for: self.selectedEmotionIndex) else { return }
         postWrite(dto: WriteRequstDto(title: dreamWriteView.titleTextField.text ?? "", emotion: emotionName, content: dreamWriteView.contentTextView.text ?? ""))
+    }
+    
+    func popToHomeVC() {
+        NotificationCenter.default.post(name: NSNotification.Name("popHomeVC"),
+                                        object: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -83,7 +93,7 @@ extension DreamWriteViewController: UICollectionViewDataSource {
 extension DreamWriteViewController: BackButtonProtocol {
     
     func tapBackButton() {
-        self.navigationController?.popViewController(animated: true)
+        popToHomeVC()
     }
 }
 
@@ -91,7 +101,7 @@ extension DreamWriteViewController {
     
     func postWrite(dto: WriteRequstDto) {
         DiaryService.shared.postWrite(requestDto: dto) { _ in
-            self.navigationController?.popViewController(animated: true)
+            self.popToHomeVC()
         }
     }
 }

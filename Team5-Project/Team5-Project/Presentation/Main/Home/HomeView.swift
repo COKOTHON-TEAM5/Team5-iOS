@@ -109,7 +109,6 @@ final class HomeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setUI()
         setHierarchy()
         setLayout()
     }
@@ -121,10 +120,6 @@ final class HomeView: UIView {
 }
 
 extension HomeView {
-    
-    func setUI() {
-        
-    }
     
     func setHierarchy() {
         addSubviews(backgroundImageView, navigationBar, homeTitleLabel, homeDetailView, sleepButton, wakeButton, completeButton, passButton)
@@ -198,8 +193,21 @@ extension HomeView {
         }
     }
     
-    func setButton(status: Int) {
-        switch status {
+    func bindHomeView(model: ReportResponseDto) {
+        if model.emotion == "" {
+            homeTitleLabel.text = "요즘 \(UserManager.shared.getUserName)는\n꿈을 꾸지 않았구나!"
+            homeDetailTitle.text = "최근 꿈을 꾸지 않았어"
+            homeDetailContent.text = "심리학에서는 꿈이 내면세계를 반영해.\n그러므로 너의 내면적인 성장을 이뤄내기 위해서는\n꿈을 기록하고 파악하는 것이 필요해!"
+        } else {
+            homeTitleLabel.text = "요즘 \(UserManager.shared.getUserName)는\n\(model.emotion) 꿈을 많이 꿨구나!"
+            homeTitleLabel.partColorChange(targetString: "\(model.emotion) 꿈", textColor: .blue100)
+            homeDetailTitle.text = "최근 \(model.emotion) 꿈을 총 \(model.maxcount)번 꿨어"
+            homeDetailTitle.partColorChange(targetString: "\(model.maxcount)번", textColor: .blue100)
+            homeDetailContent.text = model.content
+            homeDetailContent.asLineHeight()
+            homeDetailIcon.image = Emotion.image(for: "\(model.emotion)")
+        }
+        switch model.status {
         case 0:
             sleepButton.isHidden = false
             wakeButton.isHidden = true

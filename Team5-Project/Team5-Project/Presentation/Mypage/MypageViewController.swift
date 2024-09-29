@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SafariServices
+
 final class MypageViewController: UIViewController {
     
     private let mypageView = MypageView()
@@ -54,17 +56,24 @@ extension MypageViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
         case 0:
-            print("공지사항")
+            if let url = URL(string: "https://srchotion.notion.site/d5c078fb01104a0aa4c6096e77eadf52?pvs=4") {
+                let safariViewController = SFSafariViewController(url: url)
+                self.present(safariViewController, animated: true, completion: nil)
+            }
         case 1:
-            print("약관정책")
+            if let url = URL(string: "https://srchotion.notion.site/c5e600cb29bc4298b2e40fc7c552e1ad?pvs=4") {
+                let safariViewController = SFSafariViewController(url: url)
+                self.present(safariViewController, animated: true, completion: nil)
+            }
         case 2:
-            print("개발자소개")
+            if let url = URL(string: "https://srchotion.notion.site/848438b9fbca43d0a25d40f1b346dbb4?pvs=4") {
+                let safariViewController = SFSafariViewController(url: url)
+                self.present(safariViewController, animated: true, completion: nil)
+            }
         case 3:
-            print("로그아웃")
             UserManager.shared.logout()
             self.changeRootToSplashVC()
         case 4:
-            print("탈퇴하기")
             UserManager.shared.withdraw()
             self.changeRootToSplashVC()
         default:
